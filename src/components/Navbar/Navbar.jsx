@@ -114,8 +114,24 @@ const Navbar = () => {
           <Tab title="About Us" to="about" />
           <Tab title="Locations" to="location" />
           <Tab title="Franchise" to="franchise" />
-          <Button title="Order in Austin" />
-          <Button title="Order in San Jose" />
+          <a
+            href="https://austin.orderbanhmioven.com/"
+            className=" px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+          >
+            Order in Austin TX
+          </a>
+          <a
+            href="https://story.orderbanhmioven.com/"
+            className=" px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+          >
+            Order in Story CA
+          </a>
+          <a
+            href="https://capitol.orderbanhmioven.com/"
+            className=" px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+          >
+            Order in Capital CA
+          </a>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Button = (props) => {
   const handleCloseClick = () => {
     setLocalShowDetail(false);
   };
-
+  const links = props.links;
   return (
     <div>
       <button
@@ -32,17 +32,30 @@ const Button = (props) => {
               <FaArrowLeft />
             </button>
             <div className="flex flex-col justify-center items-center space-y-9 mt-10">
-              <a className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full">
-                Story CA
-              </a>
+              {links?.map((link, index) => (
+                <React.Fragment key={index}>
+                  <a
+                    href={link.story}
+                    className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+                  >
+                    Story CA
+                  </a>
 
-              <a className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full">
-                Capital CA
-              </a>
+                  <a
+                    href={link.capital}
+                    className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+                  >
+                    Capital CA
+                  </a>
 
-              <a className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full">
-                Austin Tx
-              </a>
+                  <a
+                    href={link.austin}
+                    className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+                  >
+                    Austin Tx
+                  </a>
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </div>

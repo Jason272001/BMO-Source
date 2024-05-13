@@ -11,7 +11,7 @@ const Menu = (props) => {
       </h1>
       <div className="flex flex-wrap gap-8 justify-center">
         {products?.map((product) => (
-          <Cards key={product._id} product={product} />
+          <Cards key={product._id} product={product} links={product.link} />
         ))}
       </div>
     </div>

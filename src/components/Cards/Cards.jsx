@@ -2,7 +2,7 @@
 import React from "react";
 import { urlFor } from "../../client";
 import Button from "../Button/Button";
-const Cards = ({ product: { image, name, price } }) => {
+const Cards = ({ product: { image, name, price }, links }) => {
   return (
     <div className="w-full lg:w-1/4 p-5 shadow-[rgba(0,_0,_0,_0.7)_2px_3px_8px] rounded-lg">
       <img
@@ -15,7 +15,8 @@ const Cards = ({ product: { image, name, price } }) => {
 
         <div className="flex flex-row items-center justify-center gap-4">
           <h3 className="font-semibold text-lg">${price}</h3>
-          <Button title="Buy Now" />
+
+          <Button title="Buy Now" links={links} />
         </div>
       </div>
     </div>
