@@ -34,9 +34,9 @@ const Navbar = () => {
                 <BiChevronDown className="cursor-pointer" size={25} />
               </div>
               <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
-                <li>
+                {/* <li>
                   <Tab title="Best Seller" to="best" />
-                </li>
+                </li> */}
 
                 <li>
                   <Tab title="Banh Mi" to="banhmi" />
