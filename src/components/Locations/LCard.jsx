@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import Button from "../Button/Button";
 
 const LCard = (props) => {
   return (
@@ -20,7 +19,7 @@ const LCard = (props) => {
         </div>
 
         <div className="flex flex-row justify-center ">
-          <h2 className="text-lg font-bold">{props.ph}:&nbsp; </h2>
+          <h2 className="text-lg font-bold">Phone:&nbsp; </h2>
           <p>
             <a
               className="hover:text-brightColor transition-all cursor-pointer"
@@ -32,7 +31,12 @@ const LCard = (props) => {
         </div>
 
         <div className="flex flex-row items-center justify-center gap-2">
-          <Button title="Get Directions" />
+          <a
+            className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transsition-all rounded-full"
+            href={props.link}
+          >
+            Get Directions
+          </a>
         </div>
       </div>
     </div>

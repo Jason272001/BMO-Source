@@ -69,14 +69,28 @@ const Navbar = () => {
               </div>
               <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
                 <li>
-                  <p className="hover:text-brightColor transition-all cursor-pointer">
+                  <a
+                    className="hover:text-brightColor transition-all cursor-pointer"
+                    href="https://austin.orderbanhmioven.com/"
+                  >
                     Austin,TX
-                  </p>
+                  </a>
                 </li>
                 <li>
-                  <p className="hover:text-brightColor transition-all cursor-pointer">
-                    SanJose,CA
-                  </p>
+                  <a
+                    className="hover:text-brightColor transition-all cursor-pointer"
+                    href="https://story.orderbanhmioven.com/"
+                  >
+                    Story SanJose,CA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:text-brightColor transition-all cursor-pointer"
+                    href="https://capitol.orderbanhmioven.com/"
+                  >
+                    Capitol SanJose,CA
+                  </a>
                 </li>
               </ul>
             </div>
