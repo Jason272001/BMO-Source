@@ -12,6 +12,7 @@ const Home = () => {
   const handleCloseClick = () => {
     setLocalShowDetail(false);
   };
+  console.log("Image Path:", bgp);
   return (
     <div
       className="min-h-screen flex flex-row justify-between items-center lg:px-32 px-5  bg-cover bg-no-repeat"

@@ -7,6 +7,7 @@ import About from "../components/About/About";
 import Locations from "../components/Locations/Locations";
 import Franchise from "../components/Franchise/Franchise";
 import Footer from "../components/Footer/Footer";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import {
   sandwichQuery,
   drinkQuery,
@@ -14,10 +15,11 @@ import {
   appetizerQuery,
   soupQuery,
 } from "../data";
+import Login from "../components/Login/Login";
 
 import { client } from "../client";
 
-const App = () => {
+export const Combine = () => {
   const [sandwich, setSandwich] = useState([]);
   const [drink, setDrink] = useState([]);
   const [dessert, setDessert] = useState([]);
@@ -102,6 +104,15 @@ const App = () => {
         </div>
       </main>
     </div>
+  );
+};
+
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Combine />} />
+      <Route path="/team-login" element={<Login />} />
+    </Routes>
   );
 };
 
