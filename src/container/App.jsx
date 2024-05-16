@@ -15,9 +15,10 @@ import {
   appetizerQuery,
   soupQuery,
 } from "../data";
-import Login from "../components/Login/Login";
+import Login from "../Auth/Login/Login";
 
 import { client } from "../client";
+import Inventory from "../Auth/Inventroy/Inventory";
 
 export const Combine = () => {
   const [sandwich, setSandwich] = useState([]);
@@ -112,6 +113,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Combine />} />
       <Route path="/team-login" element={<Login />} />
+      <Route path="/team-inventory" element={<Inventory />} />
     </Routes>
   );
 };
