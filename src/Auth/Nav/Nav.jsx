@@ -1,14 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo/Logo";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import logo from "./Logo.png";
-
+import { fetchUser } from "../../fetchUser";
 const Nav = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = fetchUser();
+    if (!user) navigate("/");
+  }, []);
+
   const [menu, setMenu] = useState(false);
+
   const handleChange = () => {
     setMenu(!menu);
   };
@@ -27,49 +35,41 @@ const Nav = () => {
           </div>
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8 ">
             <Link className="hover:text-brightColor transition-all cursor-pointer">
-            
-            Inventory
-            
+              Inventory
             </Link>
-            
-           
-            <Link className="hover:text-brightColor transition-all cursor-pointer">
-            
-            Request 
-            
-            </Link>
-
-           
 
             <Link className="hover:text-brightColor transition-all cursor-pointer">
-            
-            History 
-            
+              Request
             </Link>
 
+            <Link className="hover:text-brightColor transition-all cursor-pointer">
+              History
+            </Link>
           </nav>
 
-          {/* <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center">
             {menu ? (
-              <AiOutlineClose size={25} onClick={handleChange} />
+              <AiOutlineClose size={25} onClick={closeMenu} />
             ) : (
               <AiOutlineMenuUnfold size={25} onClick={handleChange} />
             )}
-          </div> */}
+          </div>
         </div>
-        {/* <div
+        <div
           className={`${
             menu ? "" : "-translate-x-full"
           } lg:hidden flex flex-col absolute bg-black text-white left-0 top-20 font-semibold text-2xl text-center pt-8 pb-4 gap-8 w-full h-fit transition-transform duration-300`}
         >
-          <Tab title="Home" to="home" />
-          <Tab title="Menu" to="menu" />
-          <Tab title="About Us" to="about" />
-          <Tab title="Locations" to="location" />
-          <Tab title="Franchise" to="franchise" />
-          
-         
-        </div> */}
+          <Link className="hover:text-brightColor transition-all cursor-pointer">
+            Inventory
+          </Link>
+          <Link className="hover:text-brightColor transition-all cursor-pointer">
+            Request
+          </Link>
+          <Link className="hover:text-brightColor transition-all cursor-pointer">
+            History
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import About from "../components/About/About";
 import Locations from "../components/Locations/Locations";
 import Franchise from "../components/Franchise/Franchise";
 import Footer from "../components/Footer/Footer";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import {
   sandwichQuery,
   drinkQuery,
@@ -15,10 +15,15 @@ import {
   appetizerQuery,
   soupQuery,
 } from "../data";
-import Login from "../Auth/Login/Login";
+// import Login from "../Auth/Login/Login";
 
 import { client } from "../client";
-import Inventory from "../Auth/Inventroy/Inventory";
+
+// import Inventory from "../Auth/Inventroy/Inventory";
+const ProtectedRoute = ({ children }) => {
+  const usernumber = localStorage.getItem("number");
+  return usernumber ? children : <Navigate to="/team-login" replace />;
+};
 
 export const Combine = () => {
   const [sandwich, setSandwich] = useState([]);
@@ -112,8 +117,15 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Combine />} />
-      <Route path="/team-login" element={<Login />} />
-      <Route path="/team-inventory" element={<Inventory />} />
+      {/* <Route path="/team-login" element={<Login />} />
+      <Route
+        path="/team-inventory"
+        element={
+          <ProtectedRoute>
+            <Inventory />
+          </ProtectedRoute>
+        }
+      /> */}
     </Routes>
   );
 };
