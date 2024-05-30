@@ -11,15 +11,12 @@ const Franchise = () => {
 
       <div className="flex min-h-full flex-1 flex-col justify-center px-6  lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
-          </h2>
+          s{" "}
           <p className="font-bold text-center pb-10">
             Please fill out our form below to inquire about becoming a
             franchisee and be part of our family. A response will be sent within
             24 hours, thank you!
           </p>
-
           <Logo logo={logo} className="mx-auto h-32 w-auto z-0" />
         </div>
 

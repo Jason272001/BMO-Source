@@ -7,6 +7,8 @@ import About from "../components/About/About";
 import Locations from "../components/Locations/Locations";
 import Franchise from "../components/Franchise/Franchise";
 import Footer from "../components/Footer/Footer";
+import Job from "../components/Job/Job";
+
 import { Routes, Route, Navigate } from "react-router-dom";
 import {
   sandwichQuery,
@@ -103,6 +105,10 @@ export const Combine = () => {
 
         <div id="franchise">
           <Franchise />
+        </div>
+
+        <div id="job">
+          <Job />
         </div>
 
         <div id="footer">

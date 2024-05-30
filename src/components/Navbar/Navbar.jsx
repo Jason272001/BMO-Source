@@ -61,7 +61,7 @@ const Navbar = () => {
             <Tab title="About Us" to="about" />
             <Tab title="Locations" to="location" />
             <Tab title="Franchise" to="franchise" />
-
+            <Tab title="Job" to="job" />
             <div className="relative group">
               <div className="flex items-center gap-1">
                 <Tab title="Order Now" to="menu" />
@@ -114,6 +114,7 @@ const Navbar = () => {
           <Tab title="About Us" to="about" />
           <Tab title="Locations" to="location" />
           <Tab title="Franchise" to="franchise" />
+          <Tab title="Job" to="job" />
           <a
             href="https://austin.orderbanhmioven.com/"
             className=" px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
